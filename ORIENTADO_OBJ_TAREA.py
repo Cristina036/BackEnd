@@ -1,5 +1,5 @@
 class Equipo:
-    def __init__(self, nombre, integrante1, integrante2, eslogan="", integrante3=None):
+    def __init__(self, nombre, integrante1, integrante2, integrante3, eslogan=""):
     #Se inicializan los atributos de cada equipo
         self.nombre = nombre
         self.integrantes = [integrante1, integrante2]
@@ -11,7 +11,7 @@ class Equipo:
         integrantes_str = "\n".join(self.integrantes)
         if len(self.integrantes) < 3:
             integrantes_str += "\n--------------------"
-        return f"{self.nombre} - {self.eslogan}:\n{integrantes_str}\n"
+        return f"{self.nombre}\nEslogan: {self.eslogan}\n{integrantes_str}\n"
 
 class FS3:
     def __init__(self):
